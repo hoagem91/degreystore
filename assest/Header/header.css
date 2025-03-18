@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  z-index: 999;
+}
+.avatar {
+  width: 25%;
+  padding: 10px 0;
+}
+.avatar > a > img {
+  max-height: 70px;
+  width: 80px;
+}
+.menu {
+  width: 50%;
+  display: block;
+}
+.list-menu {
+  display: flex;
+  position: relative;
+  gap: 20px; /* Tạo khoảng cách giữa các mục */
+}
+
+.list-menu .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #000;
+  transition: all 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.list-menu > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 0 28px;
+  list-style: none;
+  cursor: pointer; /* Thêm hiệu ứng trỏ tay */
+}
+
+.list-menu > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+.list-menu > li:hover > a {
+  opacity: 0.5;
+}
+
+ul.menu-son {
+  display: none; /* Ẩn mặc định */
+  position: absolute;
+  top: 100%; /* Đặt menu con ngay dưới mục cha */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Làm mềm bóng */
+  border-radius: 4px;
+  z-index: 999; /* Đảm bảo menu con nằm trên các thành phần khác */
+}
+
+ul.menu-son > li {
+  padding: 10px;
+  list-style: none;
+}
+
+ul.menu-son > li > a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul.menu-son > li:hover > a {
+  opacity: 0.5;
+}
+
+.list-menu > li:hover > .menu-son {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tab-item.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+/* LogUser */
+.registerUser {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.Login {
+  padding-right: 8px;
+}
+.Login > a {
+  text-decoration: none;
+  color: #000;
+}
+.space {
+  text-align: center;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+.LogOut {
+  padding-left: 8px;
+}
+.LogOut > a {
+  text-decoration: none;
+  color: #000;
+}
+/* mobile */
+.menu__bars-btn {
+  display: none;
+  height: 35px;
+  width: 35px;
+  margin-left: 480px;
+  cursor: pointer;
+}
+.menu__overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#menu-toggle:checked ~ .menu__overlay {
+  display: block;
+}
+#menu-toggle:checked ~ .menu__mobile {
+  transform: translateX(0);
+}
+.menu__mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  background-color: #fff;
+  transform: translateX(-100%);
+}
+.menu__mobile-tabs {
+  display: flex;
+  height: 50px;
+}
+.menu__mobile-title {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  margin-left: 30px;
+}
+.menu__mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.menu__mobile-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  margin-left: 30px;
+  padding: 20px;
+}
+.menu__mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.menu__mobile-header > li {
+  list-style: none;
+}
+.menu__mobile-close {
+  cursor: pointer;
+  width: 24px;
+  height: 30px;
+  margin-left: 140px;
+}
+
+.menu__mobile-close svg {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 46.1875em) {
+  .menu,
+  .registerUser {
+    display: none;
+  }
+  
+  .header {
+    margin: 0;
+    padding: 0 16px;
+    justify-content: space-between;
+  }
+
+  .avatar {
+    width: auto;
+  }
+
+  .menu__bars-btn {
+    display: block;
+    margin-left: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  .menu__mobile {
+    width: 250px; /* Thu nhỏ width của menu mobile */
+  }
+
+  .menu__mobile-title {
+    font-size: 18px;
+    margin-left: 16px;
+  }
+
+  .menu__mobile-link {
+    font-size: 16px;
+    margin-left: 16px;
+    padding: 12px 16px;
+  }
+
+  .menu__mobile-header {
+    padding: 12px;
+  }
+
+  .menu__mobile-close {
+    margin-left: 90px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu__mobile-list {
+    gap: 8px;
+    margin-top: 12px;
+  }
+}
+
+/* Thêm breakpoint cho màn hình siêu nhỏ */
+@media screen and (max-width: 320px) {
+  .menu__mobile {
+    width: 100%;
+  }
+  
+  .avatar > a > img {
+    width: 60px;
+  }
+}
+
+/* Animation cho overlay */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animation khi đóng menu */
+#menu-toggle:not(:checked) ~ .menu__overlay {
+  animation: fadeOut 0.3s ease forwards;
+}

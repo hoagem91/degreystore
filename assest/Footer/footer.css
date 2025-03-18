@@ -1,0 +1,147 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  background-color: #000;
+  margin-top: 40px;
+  color: #fff;
+  width: 100%;
+}
+
+/* Phần hotline */
+.hotline h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.intro-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-phone svg {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+}
+
+.describer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Phần information */
+.address-footer ul {
+  list-style: none;
+}
+
+.address-footer li {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Phần social */
+.list-follow h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.list-social {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.list-social svg {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+
+
+/* Mobile styles */
+@media screen and (max-width: 46.1875em) {
+  .footer {
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 30px;
+  }
+
+  .hotline h2,
+  .list-follow h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .intro-info {
+    gap: 8px;
+  }
+
+  .icon-phone {
+    font-size: 20px;
+  }
+
+  .describer {
+    font-size: 14px;
+  }
+
+  .address-footer li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .list-social {
+    gap: 20px;
+  }
+
+  .list-social a {
+    font-size: 20px;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .footer {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .hotline h2,
+  .list-follow h2 {
+    font-size: 19px;
+  }
+
+  .describer {
+    font-size: 15px;
+  }
+
+  .address-footer li {
+    font-size: 15px;
+  }
+
+  .list-social {
+    gap: 18px;
+  }
+
+  .list-social a {
+    font-size: 22px;
+  }
+}
+
+/* Hover effects */
+.list-menu > li:hover > a {
+  opacity: 0.7;
+}
+
+ul.menu-son > li:hover > a {
+  opacity: 0.7;
+}
+
+.list-social a:hover {
+  opacity: 0.7;
+}

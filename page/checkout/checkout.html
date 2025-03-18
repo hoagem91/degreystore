@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán - Eleven Shop</title>
+    <link rel="stylesheet" href="./checkout.css" />
+    <link rel="stylesheet" href="/assest/GlobalStyles/globalStyles.css" />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <h1>Thanh Toán</h1>
+
+      <div class="checkout-content">
+        <div class="shipping-info">
+          <h2>Thông tin giao hàng</h2>
+          <form class="checkout-form">
+            <div class="form-group">
+              <label for="fullname">Họ và tên</label>
+              <input type="text" id="fullname" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Số điện thoại</label>
+              <input type="tel" id="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Địa chỉ</label>
+              <textarea id="address" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="note">Ghi chú</label>
+              <textarea id="note"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="order-summary">
+          <h2>Đơn hàng của bạn</h2>
+          <div class="cart-items">
+            <!-- Cart items will be displayed here -->
+          </div>
+
+          <div class="order-total">
+            <div class="subtotal">
+              <span>Tạm tính:</span>
+              <span class="amount">0₫</span>
+            </div>
+            <div class="shipping">
+              <span>Phí vận chuyển:</span>
+              <span class="amount">30,000₫</span>
+            </div>
+            <div class="total">
+              <span>Tổng cộng:</span>
+              <span class="amount">0₫</span>
+            </div>
+          </div>
+
+          <div class="payment-methods">
+            <h3>Phương thức thanh toán</h3>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="cod" checked />
+                <span>Thanh toán khi nhận hàng (COD)</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="banking" />
+                <span>Chuyển khoản ngân hàng</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="place-order-btn">Đặt hàng</button>
+        </div>
+      </div>
+
+      <!-- Thêm form thông báo -->
+      <div class="notification-modal" id="notificationModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+            <span class="close-modal">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div class="status-icon" id="statusIcon">
+              <!-- Icon sẽ được thêm bằng JS -->
+            </div>
+            <p id="modalMessage"></p>
+            <div class="order-info" id="orderInfo">
+              <!-- Thông tin đơn hàng sẽ được thêm bằng JS -->
+            </div>
+            <div class="modal-buttons">
+              <button class="btn-primary" id="primaryButton"></button>
+              <button class="btn-secondary" id="secondaryButton"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./checkout.js"></script>
+  </body>
+</html>

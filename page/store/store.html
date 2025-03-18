@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store</title>
+    <link rel="stylesheet" href="/assest/GlobalStyles/globalStyles.css" />
+    <link rel="stylesheet" href="./store.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header -->
+      <div class="header">
+        <div class="avatar">
+          <a href="#"
+            ><img src="/images/banner/LogoDegrey.webp" alt="LogoBrand"
+          /></a>
+        </div>
+        <div class="menu">
+          <ul class="list-menu tabs">
+            <li class="tab-item">
+              <a href="/App/index.html">Trang chủ</a>
+            </li>
+            <li class="tab-item">
+              <a href="#">
+                Sản phẩm
+                <ul class="menu-son">
+                  <li>
+                    <a href="/page/product/clothes/product.html">Áo Phông</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/bagschool/index.html">Bao Lô</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/snaker/index.html">Giày Dép</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/pants/index.html">Quần Jeans</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/hat/index.html">Mũ Thời Trang</a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="tab-item current">
+              <a href="/page/store/store.html">Store</a>
+            </li>
+            <li class="tab-item">
+              <a href="/page/introduce/introduce.html">Giới thiệu</a>
+            </li>
+            <!-- <div class="line"></div> -->
+          </ul>
+        </div>
+        <!-- mobile -->
+        <label class="menu__bars-btn" for="menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </label>
+        <input type="checkbox" hidden id="menu-toggle" />
+        <label class="menu__overlay" for="menu-toggle"></label>
+        <label class="menu__mobile" for="menu-toggle">
+          <ul class="menu__mobile-tabs tabs">
+            <div class="menu__mobile-header">
+              <li class="tab-item">
+                <a href="#" class="menu__mobile-title">Sản phẩm</a>
+              </li>
+              <div class="menu__mobile-close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="line"></div>
+          </ul>
+          <ul class="menu__mobile-list">
+            <li>
+              <a
+                href="/page/product/clothes/product.html"
+                class="menu__mobile-link"
+                >Áo Phông</a
+              >
+            </li>
+            <li>
+              <a
+                href="/page/product/bagschool/index.html"
+                class="menu__mobile-link"
+                >Bao Lô</a
+              >
+            </li>
+            <li>
+              <a
+                href="/page/product/snaker/index.html"
+                class="menu__mobile-link"
+                >Giày Dép</a
+              >
+            </li>
+            <li>
+              <a href="/page/product/pants/index.html" class="menu__mobile-link"
+                >Quần Jeans</a
+              >
+            </li>
+            <li>
+              <a href="/page/product/hat/index.html" class="menu__mobile-link"
+                >Mũ Thời Trang</a
+              >
+            </li>
+          </ul>
+        </label>
+      </div>
+      <!-- end header -->
+
+      <!-- nav-bar -->
+      <div class="nav-bar">
+        <div class="nav-home">
+          <a href="/App/index.html">Trang chủ</a>
+        </div>
+        <div class="nav-bar1">
+          <span>/</span>
+        </div>
+        <div class="nav-product">
+          <span>HỆ THỐNG CỬA HÀNG DEGREY</span>
+        </div>
+      </div>
+      <!-- content -->
+      <div class="content">
+        <h1>HỆ THỐNG CỬA HÀNG DEGREY</h1>
+        <div class="ytb-content">
+          <div class="ytb-content">
+            <video controls>
+              <source src="/images/video/STORE DEGREY.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="map-content">
+          <div class="map__description">
+            <div class="address-footer">
+              <ul>
+                <li class="contact-1">
+                  <b
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      font-size: 20px;
+                    "
+                    >Địa chỉ </b
+                  ><br />
+                  <b>Hà Nội:<br /></b> 234 Hoàng Quốc Việt<br />
+                </li>
+                <li class="contact-2"><b>Điện thoại:</b> 0336311117</li>
+                <li class="contact-4"><b>Email:</b> degrey.vn@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ratio">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6134800467325!2d105.78440289999999!3d21.048146199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab32837cb7b5%3A0xcb7f4c03457c0e52!2zTmfDtSAyMzQgSG_DoG5nIFF14buRYyBWaeG7h3QsIEPhu5UgTmh14bq_IDEsIELhuq9jIFThu6sgTGnDqm0sIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1715695301730!5m2!1svi!2s"
+              width="100%"
+              max-width="1000px"
+              height="auto"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- <script src="./index.js"></script> -->
+  </body>
+</html>

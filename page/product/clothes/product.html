@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản Phẩm - Eleven Shop</title>
+    <link rel="stylesheet" href="./product.css" />
+    <link rel="stylesheet" href="/assest/GlobalStyles/globalStyles.css" />
+    <link rel="stylesheet" href="/fonts/themify-icons/themify-icons.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Begin Header -->
+      <div class="header">
+        <div class="avatar">
+          <a href="#"
+            ><img src="/images/banner/LogoDegrey.webp" alt="LogoBrand"
+          /></a>
+        </div>
+        <div class="menu">
+          <ul class="list-menu tabs">
+            <li class="tab-item">
+              <a href="/App/index.html">Trang chủ</a>
+            </li>
+            <li class="tab-item current">
+              <a href="/page/product/clothes/product.html">
+                Sản phẩm
+                <ul class="menu-son">
+                  <li>
+                    <a href="/page/product/clothes/product.html">Áo Phông</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/bagschool/index.html">Bao Lô</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/snaker/index.html">Giày Dép</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/pants/index.html">Quần Jeans</a>
+                  </li>
+                  <li>
+                    <a href="/page/product/hat/index.html">Mũ Thời Trang</a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="tab-item">
+              <a href="/page/store/store.html">Store</a>
+            </li>
+            <li class="tab-item">
+              <a href="/page/introduce/introduce.html">Giới thiệu</a>
+            </li>
+            <!-- <div class="line"></div> -->
+          </ul>
+        </div>
+        <!-- mobile -->
+        <div class="header-right">
+          <!-- Cart content -->
+          <div class="header-cart">
+            <div class="cart-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                />
+              </svg>
+              <span class="cart-notice">0</span>
+            </div>
+            <!-- Cart content -->
+            <div class="cart-content">
+              <h4 class="cart-heading">Sản phẩm đã thêm</h4>
+              <div class="cart-list">
+                <!-- Cart items will be added here dynamically -->
+              </div>
+              <div class="cart-total">
+                <span>Tổng tiền:</span>
+                <span class="total-price">0₫</span>
+              </div>
+              <a href="/page/checkout/checkout.html" class="btn-checkout"
+                >Thanh toán</a
+              >
+            </div>
+          </div>
+
+          <!-- Menu bars button -->
+          <label class="menu__bars-btn" for="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
+        </div>
+        <input type="checkbox" hidden id="menu-toggle" />
+        <label class="menu__overlay" for="menu-toggle"></label>
+        <label class="menu__mobile" for="menu-toggle">
+          <ul class="menu__mobile-tabs tabs">
+            <div class="menu__mobile-header">
+              <li class="tab-item">
+                <a href="#" class="menu__mobile-title">Sản phẩm</a>
+              </li>
+              <div class="menu__mobile-close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </ul>
+          <ul class="menu__mobile-list">
+            <li>
+              <a
+                href="/page/product/clothes/product.html"
+                class="menu__mobile-link"
+                >Áo Phông</a
+              >
+            </li>
+            <li>
+              <a
+                href="/page/product/bagschool/index.html"
+                class="menu__mobile-link"
+                >Bao Lô</a
+              >
+            </li>
+            <li>
+              <a
+                href="/page/product/snaker/index.html"
+                class="menu__mobile-link"
+                >Giày Dép</a
+              >
+            </li>
+            <li>
+              <a href="/page/product/pants/index.html" class="menu__mobile-link"
+                >Quần Jeans</a
+              >
+            </li>
+            <li>
+              <a href="/page/product/hat/index.html" class="menu__mobile-link"
+                >Mũ Thời Trang</a
+              >
+            </li>
+          </ul>
+        </label>
+      </div>
+      <!-- End Header -->
+
+      <!-- Begin Nav-bar -->
+      <div class="nav-bar">
+        <div class="nav-home">
+          <a href="/App/index.html">Trang chủ</a>
+        </div>
+        <div class="nav-bar1">
+          <span>/</span>
+        </div>
+        <div class="nav-product">
+          <span>Sản phẩm áo phông - áo thun</span>
+        </div>
+      </div>
+      <!-- End Nav-bar -->
+
+      <!-- begin banner -->
+      <div class="banner">
+        <div class="banner-content">
+          <img src="/images/banner/banner.webp" alt="image" />
+        </div>
+      </div>
+      <!-- end banner -->
+
+      <!-- product -->
+      <div class="container">
+        <div class="collection-heading">
+          <h1>Sản phẩm áo phông - áo thun</h1>
+        </div>
+        <!-- <div class="select-box">
+          <span> Sắp xếp </span>
+          <i class="ti-arrow-circle-down"></i>
+          <ul class="menu-list">
+            <li><a href="#"> Giá: Tăng dần </a></li>
+            <li><a href="#"> Giá: Giảm dần </a></li>
+            <li><a href="#"> Tên: A-Z </a></li>
+            <li><a href="#"> Tên: Z-A </a></li>
+          </ul>
+        </div> -->
+        <!-- filter -->
+        <!-- <div class="collection-filter">
+        <div class="title-filter">
+          <i class="ti-filter"></i>
+          <p>Bộ lọc</p>
+        </div>
+        <div class="group-filter">
+          <div class="filter-property">
+            <div class="filter-price">
+              <span> Lọc giá </span>
+              <i class="ti-angle-down"></i>
+              <ul class="menu-list">
+                <li><a href="#"> Dưới 100.000₫</a></li>
+                <li><a href="#"> 100.000₫ - 250.000₫ </a></li>
+                <li><a href="#"> 250.000₫ - 500.000₫ </a></li>
+                <li><a href="#"> 500.000₫ - 800.000₫ </a></li>
+                <li><a href="#">Trên 800.000₫</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="filter-property">
+            <div class="filter-color">
+              <span> Màu sắc </span>
+              <i class="ti-angle-down"></i>
+              <div class="list-color">
+                <div class="color purple"></div>
+                <div class="color yellow"></div>
+                <div class="color orange"></div>
+                <div class="color pink"></div>
+                <div class="color black"></div>
+                <div class="color blue"></div>
+                <div class="color green"></div>
+                <div class="color lime"></div>
+                <div class="color gray"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-property">
+            <div class="filter-size">
+              <span> Kích thước </span>
+              <i class="ti-angle-down"></i>
+              <div class="size-options">
+                <div class="option">
+                  <input type="checkbox" id="size-s" name="size" value="s" />
+                  <label for="size-s">S</label>
+                </div>
+                <div class="option">
+                  <input type="checkbox" id="size-m" name="size" value="m" />
+                  <label for="size-m">M</label>
+                </div>
+                <div class="option">
+                  <input type="checkbox" id="size-l" name="size" value="l" />
+                  <label for="size-l">L</label>
+                </div>
+                <div class="option">
+                  <input type="checkbox" id="size-xs" name="size" value="xs" />
+                  <label for="size-xs">XS</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      End Filter -->
+
+        <!-- product content -->
+        <div class="content">
+          <div class="wrapper-product">
+            <a href="../description/index1/index.html" class="products-content">
+              <div class="product">
+                <img
+                  class="main-img"
+                  src="/images/product/T-Shirt.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/T-ShirtBehind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Áo Thun Degrey Double Logo Wax - DOWAX</h3>
+                  <div class="price">
+                    <span class="price-sale">340,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="../description/index2/index.html" class="products-content">
+              <div class="product-one">
+                <img
+                  class="main-img"
+                  src="/images/product/T-Shirt2.jpeg"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/T-Shirt2-Behind.jpeg"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Áo thun Tee shirt Degrey in hình bé Xoài - XOAI</h3>
+                  <div class="price">
+                    <span class="price-sale">310,000₫ </span>
+                    <span class="price-real">350,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../description/index3/index.html" class="products-content">
+              <div class="product-two">
+                <img
+                  class="main-img"
+                  src="/images/product/Jacket1.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/Jacket1-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Áo Khoác Degrey Cardigan màu kem nâu - CAR</h3>
+                  <div class="price">
+                    <span class="price-sale">390,000₫</span>
+                    <span class="price-real">480,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../description/index4/index.html" class="products-content">
+              <div class="product-three">
+                <img
+                  class="main-img"
+                  src="/images/product/Hoodie-1.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/Hoodie1.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Hoodie Degrey Is Us - HDIS</h3>
+                  <div class="price">
+                    <span class="price-sale">390,000₫</span>
+                    <span class="price-real">420,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../description/index5/index.html" class="products-content">
+              <div class="product-four">
+                <img
+                  class="main-img"
+                  src="/images/product/Hoodie2.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/Hoodie2-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Hoodie Degrey Is Us Kem - HDISK</h3>
+                  <div class="price">
+                    <span class="price-sale">340,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../description/index6/index.html" class="products-content">
+              <div class="product-five">
+                <img
+                  class="main-img"
+                  src="/images/product/T-shirt-Atrk.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/Shirt-Atrk-Behind"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Áo Thun Degrey Dây Rút Đen - ATRD</h3>
+                  <div class="price">
+                    <span class="price-sale">350,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../description/index7/index.html" class="products-content">
+              <div class="product-six">
+                <img
+                  class="main-img"
+                  src="/images/product/red1.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/red1-behind.jpeg"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey.Madmonks Tee Vietnam 84 Đỏ - DV84 Đỏ</h3>
+                  <div class="price">
+                    <span class="price-sale">290,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../description/index8/index.html" class="products-content">
+              <div class="product-seven">
+                <img
+                  class="main-img"
+                  src="/images/product/white1.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/white1-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey.Madmonks Tee Vietnam 84 Trắng - DV84 Trắng</h3>
+                  <div class="price">
+                    <span class="price-sale">290,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../description/index9/index.html" class="products-content">
+              <div class="product-eight">
+                <img
+                  class="main-img"
+                  src="/images/product/black1.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/black1-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey.Madmonks Tee Vietnam 84 Green - DV84G</h3>
+                  <div class="price">
+                    <span class="price-sale">290,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="../description/index10/index.html"
+              class="products-content"
+            >
+              <div class="product-nine">
+                <img
+                  class="main-img"
+                  src="/images/product/sliver1.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/sliver1-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey.Madmonks Tee Vietnam 84 Xám - DV84XA</h3>
+                  <div class="price">
+                    <span class="price-sale">290,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="../description/index11/index.html"
+              class="products-content"
+            >
+              <div class="product-ten">
+                <img
+                  class="main-img"
+                  src="/images/product/brown1.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/brown1-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey Raglan Line Nâu Tee Nâu Kem - DRLNAU</h3>
+                  <div class="price">
+                    <span class="price-sale">350,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="../description/index12/index.html"
+              class="products-content"
+            >
+              <div class="product-eleven">
+                <img
+                  class="main-img"
+                  src="/images/product/blackpink.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/blackpink-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey Raglan Line Đen Tee Đen Hồng - DRLDH</h3>
+                  <div class="price">
+                    <span class="price-sale">350,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="../description/index13/index.html"
+              class="products-content"
+            >
+              <div class="product-twelve">
+                <img
+                  class="main-img"
+                  src="/images/product/pink.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/pink-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey Raglan Line Hồng Tee Đen Hồng - DRLHD</h3>
+                  <div class="price">
+                    <span class="price-sale">350,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="../description/index14/index.html"
+              class="products-content"
+            >
+              <div class="product-thirdteen">
+                <img
+                  class="main-img"
+                  src="/images/product/vani.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/vani-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey Raglan Line Tee Kem - DRLK</h3>
+                  <div class="price">
+                    <span class="price-sale">350,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="../description/index15/index.html"
+              class="products-content"
+            >
+              <div class="product-fourteen">
+                <img
+                  class="main-img"
+                  src="/images/product/blackwhite.webp"
+                  alt="Product"
+                />
+                <img
+                  class="hover-img"
+                  src="/images/product/blackwhite-behind.webp"
+                  alt="Product Hover"
+                />
+                <div class="description">
+                  <h3>Degrey Raglan Line Tee Đen - DRLD</h3>
+                  <div class="price">
+                    <span class="price-sale">350,000₫</span>
+                    <span class="price-real">400,000₫</span>
+                  </div>
+                  <div class="cart-shopping">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#b52c2c"
+                        d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- end product content -->
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="hotline">
+        <h2>Chăm sóc khách hàng</h2>
+        <div class="intro-info">
+          <div class="icon-phone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+              />
+            </svg>
+          </div>
+          <div class="describer">
+            <span>0383069360</span>
+            <u>hoang09012004xn@gmail.com</u>
+          </div>
+        </div>
+      </div>
+      <div class="information">
+        <div class="address-footer">
+          <ul>
+            <li class="contact-1">
+              <b>Địa chỉ </b><br />
+              <b>Hà Nội:<br /></b> 234 Hoàng Quốc Việt<br />
+            </li>
+            <li class="contact-2"><b>Điện thoại:</b> 0336311117</li>
+            <li class="contact-4"><b>Email:</b> degrey.vn@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="list-follow">
+        <h2>Follow Us</h2>
+        <ul class="list-social">
+          <li>
+            <a href="https://www.facebook.com/degrey.saigon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/degrey.saigon/">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@degrey.vn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Footer -->
+    <script src="./index.js"></script>
+  </body>
+</html>

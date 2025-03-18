@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Kí</title>
+    <link rel="stylesheet" href="./register.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header -->
+      <div class="header">
+        <div class="heading">
+          <div class="avatar">
+            <a href="/App/index.html"
+              ><img src="/images/banner/LogoDegrey.webp" alt="LogoBrand"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- ennd header -->
+      <!-- begin main -->
+      <center>
+        <form class="form">
+          <p class="title">Register</p>
+          <p class="message">Signup now and get full access to our app.</p>
+          <div class="flex">
+            <div class="form-group">
+              <label>
+                <input
+                  id="first-name"
+                  name="firstname"
+                  placeholder="Firstname"
+                  type="text"
+                  class="input1"
+                />
+                <p class="form-message"></p>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>
+                <input
+                  id="last-name"
+                  name="lastname"
+                  placeholder="Lastname"
+                  type="text"
+                  class="input2"
+                />
+                <p class="form-message"></p>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input
+                class="email"
+                name="Email"
+                placeholder="Email"
+                type="email"
+                class="input"
+              />
+              <p class="form-message"></p>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input
+                class="password"
+                name="Password"
+                placeholder="Password"
+                type="password"
+                class="input"
+              />
+              <p class="form-message"></p>
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <input
+                class="confirm-password"
+                name="Confirm"
+                placeholder="Confirm Password"
+                type="password"
+                class="input"
+              />
+              <p class="form-message"></p>
+            </label>
+          </div>
+
+          <button class="submit">Submit</button>
+          <p class="signin">
+            Already have an acount ? <a href="../login/login.html">Signin</a>
+          </p>
+        </form>
+      </center>
+
+      <!-- end main -->
+    </div>
+    <script src="index.js"></script>
+    <script>
+      Validator({
+        form: ".form",
+        formGroupSelector: ".form-group",
+        errorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#first-name"),
+          Validator.isRequired("#last-name"),
+          Validator.isString("#first-name"),
+          Validator.isString("#last-name"),
+          Validator.isRequired(".email"),
+          Validator.isRequired(".password"),
+          Validator.isEmail(".email"),
+          Validator.minLength(".password", 8),
+          Validator.isConfirmed(
+            ".confirm-password",
+            function () {
+              return document.querySelector(".password").value;
+            },
+            "Mật khẩu không chính xác!"
+          ),
+        ],
+        onSubmit: function (data) {
+          console.log(data);
+        },
+      });
+    </script>
+  </body>
+</html>
